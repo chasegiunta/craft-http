@@ -1,0 +1,41 @@
+{
+    "name": "chasegiunta/craft-http",
+    "description": "Simply return the http status of a url",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "http"
+    ],
+    "support": {
+        "docs": "https://github.com/chasegiunta/http/blob/master/README.md",
+        "issues": "https://github.com/chasegiunta/http/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chase Giunta",
+            "homepage": "chasegiunta.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "chasegiunta\\http\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "http",
+        "handle": "http",
+        "schemaVersion": "1.0.0",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/chasegiunta/craft-http/master/CHANGELOG.md",
+        "class": "chasegiunta\\http\\Http"
+    }
+}
