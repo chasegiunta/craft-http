@@ -55,6 +55,15 @@ class HttpVariable
             }
 
             try {
+                
+                // Fix for SSL (https://stackoverflow.com/a/40830829/4565664)
+                stream_context_set_default( [
+                    'ssl' => [
+                        'verify_peer' => false,
+                        'verify_peer_name' => false,
+                    ],
+                ]);
+
                 $headers = get_headers($host.$url);
             } catch (\Exception $e) {
                 // URL offline, not accessible, etc.
